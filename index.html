@@ -1366,6 +1366,7 @@ async function abrirDOM(k, id) {
   const a = id != null ? await obterAto(k, id) : null;
   modalAtual = { k: chave(e), id: a ? a.id : null };
   const local = e.url || encodeURI(e.caminho || e.arquivo);
+  // no app do celular o WebView não mostra PDF: abre o PDF oficial no leitor do aparelho
   if (/PainelDOMApp/.test(navigator.userAgent) && e.url) { location.href = e.url; return; }
   const frame = document.getElementById("m-frame");
   frame.src = "about:blank";
@@ -1592,7 +1593,7 @@ document.getElementById("m-copiar").onclick = async () => {
 renderSalvos();
 
 // ---------- status da atualização e verificação manual ----------
-const STATUS0 = {"em_andamento": false, "inicio": "2026-11-13T11:42:45-03:00", "origem": "agendada", "ultima_verificacao": "2026-11-13T11:42:58-03:00", "resultado": "nada_novo", "erro": "", "novas": [], "painel_ok": true, "proxima": "2026-11-13T13:00:00.0000000-03:00", "faltantes": []};
+const STATUS0 = {"em_andamento": false, "inicio": "2026-11-13T11:57:45-03:00", "origem": "agendada", "ultima_verificacao": "2026-11-13T11:57:56-03:00", "resultado": "nada_novo", "erro": "", "novas": [], "painel_ok": true, "proxima": "2026-11-13T13:00:00.0000000-03:00", "faltantes": []};
 const SERVIDOR = false;
 const URL_SERVIDOR = "http://127.0.0.1:8766/";
 let stAtual = STATUS0, verificacaoNaCarga = STATUS0.ultima_verificacao || "", pedidoManual = false;
