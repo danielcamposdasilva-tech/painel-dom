@@ -1593,7 +1593,7 @@ document.getElementById("m-copiar").onclick = async () => {
 renderSalvos();
 
 // ---------- status da atualização e verificação manual ----------
-const STATUS0 = {"em_andamento": false, "inicio": "2026-11-18T11:28:40-03:00", "origem": "agendada", "ultima_verificacao": "2026-11-18T11:32:56-03:00", "resultado": "nada_novo", "erro": "", "novas": [], "painel_ok": true, "proxima": "", "faltantes": []};
+const STATUS0 = {"em_andamento": false, "inicio": "2026-11-18T13:00:02-03:00", "origem": "agendada", "ultima_verificacao": "2026-11-18T13:03:11-03:00", "resultado": "erro", "erro": "Não foi possível consultar o site da Prefeitura (URLError: <urlopen error [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu\r\ncorretamente após um período de tempo ou a conexão estabelecida falhou\r\nporque o host conectado não respondeu>)", "novas": [], "painel_ok": true, "proxima": "2026-11-18T15:00:00.0000000-03:00", "faltantes": []};
 const SERVIDOR = false;
 const URL_SERVIDOR = "http://127.0.0.1:8766/";
 let stAtual = STATUS0, verificacaoNaCarga = STATUS0.ultima_verificacao || "", pedidoManual = false;
